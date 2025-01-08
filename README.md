@@ -6,6 +6,7 @@
   - [stages](#stages)
     - [1: setting up the game screen](#1-setting-up-the-game-screen)
     - [2: shuffle the colors](#2-shuffle-the-colors)
+    - [3: gameplay time](#3-gameplay-time)
 
 ## learning
 while implementing the game, you will practice dom manipulations, generate random colors, manage user interactions, and control game flow with loops and conditions.
@@ -95,6 +96,37 @@ in this stage, once the page loads, you need to::
 example 1:
 
 ![stage 2 color guess game design](./s02.png)
+
+</details>
+
+### 3: gameplay time
+<details>
+<summary>implement the gameplay by handing click events for color blocks and restart button</summary>
+
+#### 3.1 description
+are you ready, contestants? it's time for the third stage of our colorful challenge!
+
+in this stage, the excitement reaches its peak as the player, get to interact with the color-blocks like never before. click on those vibrant hues and watch the magic unfold! if your choice is incorrect, fear not! the color-block will gracefully disappear, and our status text will say, "try again!"
+
+but wait, there's more! make the right selection, and prepare to bask in the glory of correctness! as you choose the correct color-block, our status text will say, "correct!"
+
+and for those moments when you need a fresh start, fear not! simply hit that restart button, and watch as the game resets itself with a whole new set of colors, ready to challenge you once again!
+
+#### 3.2 objectives
+in this stage, you should:
+
+1. handle the click event on a color block:
+  - if the clicked block's color matches the correct color, update the status message to "correct!" and optionally, set all color blocks to display the correct color.
+  - if the clicked block's color does not match the correct color, update the status message to "try again!" and hide the clicked block. use display: none to hide the block.
+2. restart the game when clicked on the restart button:
+  - reset the status message to "start guessing!".
+  - show all color blocks.
+  - start a new game.
+
+#### 3.3 examples
+example 1:
+
+![stage 3 color guess game demo](./s03.gif)
 
 </details>
 
