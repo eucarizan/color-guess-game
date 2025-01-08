@@ -5,6 +5,7 @@
   - [about](#about)
   - [stages](#stages)
     - [1: setting up the game screen](#1-setting-up-the-game-screen)
+    - [2: shuffle the colors](#2-shuffle-the-colors)
 
 ## learning
 while implementing the game, you will practice dom manipulations, generate random colors, manage user interactions, and control game flow with loops and conditions.
@@ -64,6 +65,36 @@ in this stage, you should:
 example 1:
 
 ![color game design](./s01.png)
+
+</details>
+
+### 2: shuffle the colors
+<details>
+<summary>pick random rgb value to be guessed and shuffle the colors of color blocks</summary>
+
+#### 2.1 description
+welcome back, contestants! it's time for the color shuffle challenge!
+
+in this stage, you'll need to channel your inner color magician and dazzle us with your javascript skills! your mission? once the page loads, randomize the rgb-color value paragraph and also shake up those color-block backgrounds. but here's the twist – one of those color-blocks must be the correct color!
+
+get ready to paint the town red, blue, green, or any color your heart desires! are you up for the challenge, or will you be seeing shades of defeat? let the second stage begin!
+
+#### 2.2 objectives
+in this stage, once the page loads, you need to::
+
+1. generate a random correct rgb color.
+2. update the text content of the #rgb-color element to display the correct rgb color in uppercase: "rgb(0,0,0)".
+3. randomize the background color of all color blocks.
+4. make sure one of the color blocks matches the correct color. for example,
+    random correct color: rgb(94, 47, 62)
+    color blocks: rgb(3, 67, 53), rgb(119, 120, 157), rgb(63, 141, 13), rgb(201, 76, 53), rgb(80, 42, 44), rgb(94, 47, 62)
+    here, the random correct color is one of the colors present in color blocks.
+5. begin the game when the script is executed after page load.
+
+#### 2.3 examples
+example 1:
+
+![stage 2 color guess game design](./s02.png)
 
 </details>
 
