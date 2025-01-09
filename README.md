@@ -117,7 +117,7 @@ in this stage, you should:
 
 1. handle the click event on a color block:
   - if the clicked block's color matches the correct color, update the status message to "correct!" and optionally, set all color blocks to display the correct color.
-  - if the clicked block's color does not match the correct color, update the status message to "try again!" and hide the clicked block. use display: none to hide the block.
+  - if the clicked block's color does not match the correct color, update the status message to "try again!" and hide the clicked block. use `display: none` to hide the block.
 2. restart the game when clicked on the restart button:
   - reset the status message to "start guessing!".
   - show all color blocks.

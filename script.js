@@ -2,6 +2,7 @@ const colorBlocks = document.getElementsByClassName("color-block");
 const colorGuess = document.getElementById("rgb-color");
 let colors = ["", "", "", "", "", ""];
 let guess = "";
+let guessIdx;
 
 function generateRandomColor() {
   const uniqueColors = new Set();
@@ -29,7 +30,28 @@ function getRandomNum() {
 function getGuess() {
   let idx = Math.floor(Math.random() * 6);
   guess = colors[idx];
+  guessIdx = idx;
   colorGuess.textContent = guess;
 }
 
+function hideBlock(idx) {
+  colorBlocks[idx].style.display = "none";
+}
+
+function clickBlock(event) {
+  let clickedIdx = Array.from(colorBlocks).indexOf(event.target);
+  if (clickedIdx !== guessIdx) {
+    hideBlock(clickedIdx);
+  } else {
+    console.log("Correct!");
+  }
+}
+
+function createBlockListener() {
+  for (let i = 0; i < colorBlocks.length; i++) {
+    colorBlocks[i].addEventListener('click', clickBlock);
+  }
+}
+
 window.addEventListener('load', generateRandomColor);
+createBlockListener();
