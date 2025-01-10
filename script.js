@@ -1,5 +1,7 @@
 const colorBlocks = document.getElementsByClassName("color-block");
 const colorGuess = document.getElementById("rgb-color");
+const status = document.getElementById("status");
+
 let colors = ["", "", "", "", "", ""];
 let guess = "";
 let guessIdx;
@@ -41,10 +43,15 @@ function hideBlock(idx) {
 function clickBlock(event) {
   let clickedIdx = Array.from(colorBlocks).indexOf(event.target);
   if (clickedIdx !== guessIdx) {
+    status.innerText = "Try Again!";
     hideBlock(clickedIdx);
   } else {
-    console.log("Correct!");
+    correctGuess();
   }
+}
+
+function correctGuess() {
+  status.innerText = "Correct";
 }
 
 function createBlockListener() {
