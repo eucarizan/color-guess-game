@@ -52,6 +52,11 @@ function clickBlock(event) {
 
 function correctGuess() {
   status.innerText = "Correct";
+  for (let i = 0; i < colorBlocks.length; i++) {
+    if (colorBlocks[i].style.display !== "none") {
+      colorBlocks[i].style.backgroundColor = guess;
+    }
+  }
 }
 
 function createBlockListener() {
