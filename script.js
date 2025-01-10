@@ -65,5 +65,15 @@ function createBlockListener() {
   }
 }
 
+function restartGame() {
+  for (let i = 0; i < colorBlocks.length; i++) {
+    colorBlocks[i].status.display = "";
+  }
+  status.innerText = "Start Guessing!";
+  generateRandomColor();
+  createBlockListener();
+}
+
 window.addEventListener('load', generateRandomColor);
 createBlockListener();
+document.getElementById("restart").addEventListener('click', restartGame);
