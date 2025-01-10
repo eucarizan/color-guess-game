@@ -1,7 +1,129 @@
+/* General styling */
+body {
+ font-family: Arial, sans-serif;
+ background: linear-gradient(135deg, #74ebd5, #acb6e5);
+ color: #333;
+ text-align: center;
+ padding: 40px 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ min-height: 100vh;
+}
+
+h1 {
+ font-size: 3em;
+ color: #fff;
+ margin-bottom: 20px;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#rgb-color {
+ font-size: 1.8em;
+ font-weight: bold;
+ color: #fff;
+ margin: 20px 0;
+ background: rgba(255, 255, 255, 0.2);
+ padding: 10px 20px;
+ border-radius: 8px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#status {
+ font-size: 1.4em;
+ color: #fff;
+ margin-bottom: 30px;
+ transition: color 0.3s ease;
+}
+
+/* Color block styling */
 .color-block {
  display: inline-block;
- margin: 10px;
- border-radius: 5px;
+ margin: 15px;
+ border-radius: 12px;
  cursor: pointer;
- padding: 20px;
+ padding: 30px;
+ width: 120px;
+ height: 120px;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.color-block:hover {
+ transform: scale(1.1);
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.color-block:active {
+ transform: scale(1.05);
+}
+
+/* Restart button styling */
+#restart {
+ background: linear-gradient(135deg, #ff7e5f, #feb47b);
+ color: white;
+ border: none;
+ border-radius: 25px;
+ padding: 12px 30px;
+ font-size: 1.2em;
+ font-weight: bold;
+ cursor: pointer;
+ margin-top: 30px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+ transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#restart:hover {
+ background: linear-gradient(135deg, #feb47b, #ff7e5f);
+ box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+#restart:active {
+ transform: scale(0.98);
+ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for the color blocks */
+@keyframes bounceIn {
+ 0% {
+  opacity: 0;
+  transform: scale(0.3);
+ }
+ 50% {
+  opacity: 1;
+  transform: scale(1.05);
+ }
+ 70% {
+  transform: scale(0.9);
+ }
+ 100% {
+  transform: scale(1);
+ }
+}
+
+/* Apply bounce animation to color blocks */
+.color-block {
+ animation: bounceIn 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+ h1 {
+  font-size: 2.5em;
+ }
+ #rgb-color {
+  font-size: 1.5em;
+ }
+ #status {
+  font-size: 1.2em;
+ }
+ .color-block {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+ }
+ #restart {
+  font-size: 1em;
+  padding: 10px 25px;
+ }
 }
