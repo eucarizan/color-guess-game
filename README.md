@@ -7,6 +7,7 @@
     - [1: setting up the game screen](#1-setting-up-the-game-screen)
     - [2: shuffle the colors](#2-shuffle-the-colors)
     - [3: gameplay time](#3-gameplay-time)
+    - [4: bonus stage](#4-bonus-stage)
 
 ## learning
 while implementing the game, you will practice dom manipulations, generate random colors, manage user interactions, and control game flow with loops and conditions.
@@ -130,20 +131,31 @@ example 1:
 
 </details>
 
+### 4: bonus stage
+<details>
+<summary>spice up the game screen with some style</summary>
+
+#### 4.1 description
+welcome to the final bonus stage!
+
+congratulations, dear players! you've made it this far, showcasing your coding prowess and creativity. now, it's time to unleash your inner designer and style the game page like never before!
+
+in this stage, you have the power to transform the game page into a visual masterpiece. let your imagination run wild! from dazzling colors to eye-popping animations, the stage is yours to command. be bold, be daring, be you!
+
+are you ready to level up your game and create a design that will be remembered for ages? the spotlight is on you, so go ahead and make it legendary! 
+
+#### 4.2 objectives
+bonus stage! no extra requirements
+
+#### 4.3 examples
+example 1:
+
+![stage 4 guess game demo](./s04.gif)
+
+</details>
+
 [<<](https://github.com/eucarizan/front-end/blob/main/README.md)
 <!--
 :%s/\(Sample \(Input\|Output\) \d:\)\n\(.*\)/```\r\r**\1**\r```\3/gc
-
-### 0: 
-<details>
-<summary></summary>
-
-#### 0.1 description
-
-#### 0.2 objectives
-
-#### 0.3 examples
-
-</details>
 -->
 
