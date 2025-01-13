@@ -47,6 +47,7 @@ function clickBlock(event) {
     hideBlock(clickedIdx);
   } else {
     correctGuess();
+    removeBlockListener();
   }
 }
 
@@ -65,9 +66,15 @@ function createBlockListener() {
   }
 }
 
+function removeBlockListener() {
+  for (let i = 0; i < colorBlocks.length; i++) {
+    colorBlocks[i].removeEventListener('click', clickBlock);
+  }
+}
+
 function restartGame() {
   for (let i = 0; i < colorBlocks.length; i++) {
-    colorBlocks[i].status.display = "";
+    colorBlocks[i].style.display = "";
   }
   status.innerText = "Start Guessing!";
   generateRandomColor();
